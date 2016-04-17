@@ -47,6 +47,7 @@ footer {
     height: auto;
     margin: 0 auto;
     display: block;
+    margin-top: -30px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -70,11 +71,6 @@ li {
     display: inline;
 }
 
-li a {
-    text-decoration: none;
-    color: #fb182c;
-}
-
 #banner img {
     max-width: 100%;
     height: auto;
@@ -94,20 +90,6 @@ p {
     font-size: 0.8em;
     text-shadow: 1px 0 2px rgba(0, 0, 0, 0.75);
 }
-
-.link {
-    font-family: euphemia;
-    color: #fb182c;
-    text-decoration: none;
-
-}
-
-.link:hover,
-nav li a:hover {
-    text-decoration: underline;
-    font-style: italic;
-}
-
 
 /* Begin Button Styling */
 
@@ -151,24 +133,26 @@ nav li a:hover {
     list-style: none;
 }
 
+.slicknav_menu {
+    display: none;
+}
+
+
 
 @media all and (min-width: 300px) {
-    #header {
-        padding: 30px;
+
+    #menu {
+        display: none;
     }
 
-    h2 {
-        margin-top: -1px;
-        margin-bottom: -5px;
-    }
-
-    #content {
-        padding: 20px 20px 120px 20px;
-    }
-
-    #content a {
+    .slicknav_menu {
         display: block;
-        float: left;
+    }
+
+    #header {
+        margin-top: 30px;
+        padding-bottom: 20px;
+        padding-left: 10px;
     }
 
     #sun,
@@ -231,8 +215,16 @@ nav li a:hover {
 }
 
 @media all and (min-width: 716px) {
+    .slicknav_menu {
+        display: none;
+    }
+
     #logo img {
         max-width: 50%;
+    }
+
+    #menu {
+        display: inline;
     }
 
 }
