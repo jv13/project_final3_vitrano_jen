@@ -50,6 +50,16 @@ body {
     margin-right: auto;
 }
 
+#hours {
+    color: #d4fc43;
+}
+
+li a {
+    display: block;
+    text-decoration: none;
+    color: #fb182c;
+}
+
 #content {
     background-color: #404578;
     width: 100%;
@@ -68,6 +78,7 @@ h3 {
     font-family: euphemia;
 }
 
+
 p {
     color: #e6e6e6;
     font-family: euphemia;
@@ -82,7 +93,8 @@ p {
 
 }
 
-#link:hover {
+#link:hover,
+nav li a:hover {
     text-decoration: underline;
     font-style: italic;
 }
