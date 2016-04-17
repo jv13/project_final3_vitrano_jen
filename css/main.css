@@ -51,12 +51,20 @@ footer {
     margin-right: auto;
 }
 
-#hours,
+#hours {
+    color: #63d7e5;
+}
+
 #sun,
 #fri,
 footer p {
     color: #d4fc43;
 }
+
+#fri {
+    margin-bottom: -10px;
+}
+
 
 li {
     display: inline;
@@ -79,19 +87,6 @@ li a {
     width: 100%;
     height: auto;
 }
-
-h2 {
-    color: #d4fc43;
-    font-family: euphemia;
-    font-size: 2em;
-}
-
-h3 {
-    font-size: 1em;
-    color: #63d7e5;
-    font-family: euphemia;
-}
-
 
 p {
     color: #e6e6e6;
@@ -209,17 +204,18 @@ nav li a:hover {
     }
 
     footer p {
-        display: inline;
+        display: block;
+        padding-left: 10px;
+        font-size: 1em;
     }
 
-    .address {
-        padding-top: 3%;
-        padding-left: 10px;
+    .title {
+        color: #63d7e5;
+        padding-top: 5%;
     }
 
-    .phone {
-        padding-top: 5px;
-        padding-left: 10px;
+    .footertext {
+        margin-top: -10px;
     }
 
     .socialmedia img {
