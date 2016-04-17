@@ -56,6 +56,86 @@ body {
     height: auto;
 }
 
+h2 {
+    color: #d4fc43;
+    font-family: spaceranger;
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1em;
+    color: #63d7e5;
+    font-family: aspace;
+}
+
+p {
+    color: #e6e6e6;
+    font-family: euphemia;
+    font-size: 0.8em;
+    text-shadow: 1px 0px 2px rgba(0, 0, 0, 0.75);
+}
+
+#link {
+    font-family: euphemia;
+    color: #fb182c;
+    text-decoration: none;
+
+}
+
+#link:hover {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+
+/* Begin Button Styling */
+
+.btn {
+    border: none;
+    color: #e6e6e6;
+    background-color: #ff7000;
+    text-align: center;
+    font-family: euphemia;
+    border-radius: 10px;
+    box-shadow: 0 6px #ab3c3c;
+    padding: 15px 35px;
+    position: relative;
+}
+
+/* Allows for the "Menu" button to be the same width as "arcade" */
+
+#top {
+    padding: 15px 40px;
+}
+
+.btn-h:hover {
+    box-shadow: 0 4px #ab3c3c;
+    top: 2px;
+}
+
+.btn-h:active {
+    box-shadow: 0 0 #ab3c3c;
+    top: 6px;
+}
+
+/* End button styling */
+
+#images img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border: #63d7e5 solid 2px;
+}
+
+#images img:hover {
+    box-shadow: 0 0 2px 3px #d4fc43;
+}
+
+.lists ul li {
+    list-style: none;
+}
+
+
 @media all and (min-width: 300px) {
     #header {
         padding: 30px;
