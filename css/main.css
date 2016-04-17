@@ -50,12 +50,17 @@ body {
     margin-right: auto;
 }
 
-#hours {
+#hours,
+#sun,
+#fri {
     color: #d4fc43;
 }
 
+li {
+    display: inline;
+}
+
 li a {
-    display: block;
     text-decoration: none;
     color: #fb182c;
 }
@@ -166,6 +171,11 @@ nav li a:hover {
     #content a {
         display: block;
         float: left;
+    }
+
+    #sun,
+    #fri {
+        margin-top: -10px;
     }
 
     .btn {
