@@ -44,3 +44,45 @@ body {
     width: 100%;
     height: auto;
 }
+
+@media all and (min-width: 300px) {
+    #header {
+        padding: 30px;
+    }
+
+    h2 {
+        margin-top: -1px;
+        margin-bottom: -5px;
+    }
+
+    #content {
+        padding: 20px 20px 120px 20px;
+    }
+
+    #content a {
+        display: block;
+        float: left;
+    }
+
+    .btn {
+        display: inline;
+        padding: 10px 10px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        float: left;
+        margin-left: -60px;
+    }
+
+    #content #bottom {
+        margin-left: 10px;
+    }
+
+    #images {
+        margin-left: -40px;
+        padding: 10px;
+    }
+
+    #images ul li {
+        margin-bottom: 10px;
+    }
+}
