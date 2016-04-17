@@ -65,6 +65,13 @@ li a {
     color: #fb182c;
 }
 
+#banner img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border: #63d7e5 solid 2px;
+}
+
 #content {
     background-color: #404578;
     width: 100%;
@@ -91,14 +98,14 @@ p {
     text-shadow: 1px 0 2px rgba(0, 0, 0, 0.75);
 }
 
-#link {
+.link {
     font-family: euphemia;
     color: #fb182c;
     text-decoration: none;
 
 }
 
-#link:hover,
+.link:hover,
 nav li a:hover {
     text-decoration: underline;
     font-style: italic;
@@ -121,8 +128,7 @@ nav li a:hover {
 
 /* Allows for the "Menu" button to be the same width as "arcade" */
 
-#top,
-#bottom {
+.button {
     padding: 15px 40px;
 }
 
@@ -178,27 +184,26 @@ nav li a:hover {
         margin-top: -10px;
     }
 
-    .btn {
-        display: inline;
-        padding: 10px 10px;
-        margin-top: 40px;
-        margin-bottom: 20px;
-        float: left;
-        margin-left: -60px;
+    .menu img,
+    .arcade img,
+    .contact img {
+        width: 50%;
+        display: block;
+        margin: auto;
+        margin-top: 25px;
+        border: #63d7e5 solid 2px;
+        border-radius: 50%;
     }
 
-    #content #bottom {
-        margin-left: 10px;
+    .menu img:hover,
+    .arcade img:hover,
+    .contact img:hover {
+        box-shadow: 0 0 2px 3px #d4fc43;
     }
 
-    #images {
-        margin-left: -40px;
-        padding: 10px;
-    }
 
-    #images ul li {
-        margin-bottom: 10px;
-    }
+
+
 }
 
 @media all and (min-width: 716px) {
