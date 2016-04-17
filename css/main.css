@@ -67,21 +67,23 @@ footer p {
 }
 
 
-li {
+footer li {
     display: inline;
 }
 
 #banner img {
     max-width: 100%;
-    height: auto;
-    margin: 0 auto;
     border: #63d7e5 solid 2px;
 }
 
-#content {
-    background-color: #404578;
-    width: 100%;
-    height: auto;
+#banner li {
+    list-style: none;
+    margin: 0;
+}
+
+#banner ul {
+    margin: 0;
+    padding: 0;
 }
 
 p {
@@ -118,26 +120,11 @@ p {
 
 /* End button styling */
 
-#images img {
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-    border: #63d7e5 solid 2px;
-}
-
-#images img:hover {
-    box-shadow: 0 0 2px 3px #d4fc43;
-}
-
-.lists ul li {
-    list-style: none;
-}
-
 .slicknav_menu {
     display: none;
 }
 
-
+/* Begin Mobile styling */
 
 @media all and (min-width: 300px) {
 
@@ -221,11 +208,59 @@ p {
 
     #logo img {
         max-width: 50%;
+        padding-top: 25px;
     }
 
     #menu {
         display: inline;
     }
+
+    #menu li a {
+        color: #fb182c;
+        text-decoration: none;
+        font-size: 1.5em;
+        float: left;
+        padding-right: 20px;
+    }
+
+    #menu li a:hover {
+        text-decoration: underline;
+        font-style: italic;
+    }
+
+    #hours,
+    #sun,
+    #fri {
+        display: inline;
+        font-size: 1em;
+    }
+
+    .menu img,
+    .arcade img,
+    .contact img {
+        width: 25%;
+        display: inline;
+        border-radius: 50%;
+    }
+
+    .menu img {
+        margin-top: 5%;
+        margin-left: 5%;
+        float: left;
+    }
+
+    .menu button {
+        float: left;
+        margin-top: 250px;
+        margin-left: -175px;
+    }
+
+    .arcade img {
+        margin-left: 50px;
+        margin-top: -0.5px;
+
+    }
+
 
 }
 
