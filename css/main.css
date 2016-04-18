@@ -240,7 +240,17 @@ footer li {
     }
 
     #linkcontent img {
-       width: 35%;
+        width: 50%;
+    }
+
+    .left {
+        float: left;
+        width: 50%;
+    }
+
+    .right {
+        float: right;
+        width: 50%;
     }
 
     .phone {
@@ -260,4 +270,15 @@ footer li {
         margin-left: 18%;
     }
 
+    .menu,
+    .arcade,
+    .events,
+    .contact {
+        float: left;
+        width: 25%;
+    }
+
+    #linkcontent img {
+        width: 75%;
+    }
 }
