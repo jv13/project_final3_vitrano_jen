@@ -64,18 +64,22 @@ footer p {
     margin-bottom: -10px;
 }
 
-#banner ul {
-    margin: 0;
-    background-color: green;
-    width: 100%;
-    height: 300px;
-}
-
 p {
     color: #e6e6e6;
     font-family: euphemia;
     font-size: 0.8em;
     text-shadow: 1px 0 2px rgba(0, 0, 0, 0.75);
+}
+
+#banner ul {
+    list-style-type: none;
+    margin: auto;
+    margin-left: -40px;
+}
+
+#banner img {
+    width: 100%;
+
 }
 
 .menu img:hover,
@@ -142,6 +146,10 @@ footer li {
 
 .footertext {
     margin-top: -10px;
+}
+
+.socialmedia {
+  color: #ffffff;
 }
 
 /* Begin Mobile styling */
