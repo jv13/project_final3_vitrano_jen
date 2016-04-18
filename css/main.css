@@ -148,10 +148,6 @@ footer li {
     margin-top: -10px;
 }
 
-.socialmedia {
-  color: #ffffff;
-}
-
 /* Begin Mobile styling */
 
 @media all and (min-width: 300px) {
