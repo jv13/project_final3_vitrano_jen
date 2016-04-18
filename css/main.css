@@ -71,9 +71,11 @@ footer li {
     display: inline;
 }
 
-#banner img {
-    max-width: 100%;
-    border: #63d7e5 solid 2px;
+#banner ul {
+    background-color: green;
+    width: 100%;
+    height: 300px;
+
 }
 
 #banner li {
@@ -122,6 +124,10 @@ p {
     display: inline;
 }
 
+#linkcontent li {
+    display: inline;
+}
+
 /* End button styling */
 
 .slicknav_menu {
@@ -160,6 +166,12 @@ p {
         margin-top: 10%;
         border: #63d7e5 solid 2px;
         border-radius: 50%;
+    }
+
+    .menu,
+    .arcade,
+    .contact {
+        margin: 0;
     }
 
     .menu img:hover,
@@ -205,6 +217,14 @@ p {
 
 }
 
+@media all and (min-width: 500px) {
+    .menu img,
+    .arcade img,
+    .contact img {
+        width: 50%;
+    }
+}
+
 @media all and (min-width: 716px) {
     .slicknav_menu {
         display: none;
@@ -224,7 +244,7 @@ p {
         color: #fb182c;
         text-decoration: none;
         font-size: 1.5em;
-        padding-right: 65px;
+        padding-right: 55px;
         text-align: center;
     }
 
@@ -234,7 +254,7 @@ p {
     }
 
     #linkmenu {
-        padding-left: 30px;
+        padding-left: 10px;
     }
 
     #hoursofop {
@@ -248,13 +268,75 @@ p {
         font-size: 1em;
     }
 
+    #linkcontent li {
+        display: inline;
+        float: left;
+        margin-bottom: 200px;
+    }
 
+    .menu {
+        margin-left: -20px;
+        margin-top: 20px;
+    }
 
+    .arcade,
+    .contact {
+        padding-left: 45px;
+        margin-top: 20px;
+    }
 
+    .menu img,
+    .arcade img,
+    .contact img {
+        width: 75%;
+        margin-bottom: 10px;
+        margin-top: 50px;
+    }
 
+    footer {
+        margin-top: 400px;
+    }
 
+    .address {
+        float: left;
+    }
 
+    .phone {
+        float: left;
+        padding-left: 20%s;
+    }
 
+    .socialmedia li img {
+        clear: both;
+        width: 4%;
+    }
+
+    #fb {
+        margin-left: 500px;
+    }
+
+}
+
+@media all and (min-width: 900px) {
+    .menu {
+        margin-left: 40px;
+        margin-top: 20px;
+
+    }
+
+    .arcade,
+    .contact {
+        padding-left: 70px;
+        margin-top: 20px;
+    }
+
+    .menu img,
+    .arcade img,
+    .contact img {
+        width: 75%;
+        margin-bottom: 10px;
+        margin-top: 50px;
+    }
 }
 
 
@@ -266,5 +348,25 @@ p {
 
     #content {
         margin-left: 0;
+    }
+
+    .menu {
+        margin-left: 95px;
+        margin-top: 20px;
+
+    }
+
+    .arcade,
+    .contact {
+        padding-left: 165px;
+        margin-top: 20px;
+    }
+
+    .menu img,
+    .arcade img,
+    .contact img {
+        width: 100%;
+        margin-bottom: 10px;
+        margin-top: 50px;
     }
 }
