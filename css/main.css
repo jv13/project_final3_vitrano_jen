@@ -239,6 +239,10 @@ footer li {
         font-size: 1em;
     }
 
+    #linkcontent img {
+        width: 35%;
+    }
+
     .phone {
         margin-top: -16%;
         margin-left: 25%;
@@ -255,4 +259,5 @@ footer li {
         margin-top: -11.8%;
         margin-left: 18%;
     }
+
 }
