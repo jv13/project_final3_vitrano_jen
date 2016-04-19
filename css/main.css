@@ -80,7 +80,8 @@ p {
 .arcade img:hover,
 .events img:hover,
 .contact img:hover,
-.menuitems img:hover {
+.menuitems img:hover,
+.food img:hover {
     box-shadow: 0 0 2px 3px #d4fc43;
 }
 
@@ -120,7 +121,8 @@ p {
 
 #menu li,
 #linkcontent li,
-footer li {
+footer li
+.menuitems li {
     display: inline;
 }
 
@@ -174,7 +176,8 @@ footer li {
     .arcade img,
     .events img,
     .contact img,
-    .menuitems img {
+    .menuitems img,
+    .food img {
         width: 50%;
         display: block;
         margin: auto;
@@ -287,18 +290,32 @@ footer li {
         margin-bottom: 10%;
     }
 
-    #linkcontent img {
+    #linkcontent img,
+    .food img {
         width: 75%;
     }
 
-    .menuitems img {
-        width: 80%;
-        margin-left: 2%;
-    }
 }
 
 /* Begin Menu CSS */
-
+.food {
+    padding: 5%;
+}
 .food ul li {
     list-style-type: none;
+}
+
+.food h3 {
+    clear: both;
+    padding-top: -5%;
+    font-size: 1.5em;
+}
+
+.menuitems p {
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.menuitems {
+  margin-top: -1%;
 }
