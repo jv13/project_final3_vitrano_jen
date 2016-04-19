@@ -121,7 +121,8 @@ footer p,
 .food img:hover,
 #promotions img:hover,
 #events img:hover,
-#bday img:hover {
+#bday img:hover,
+#foodbanner {
     box-shadow: 0 0 2px 3px #d4fc43;
 }
 
@@ -220,6 +221,10 @@ footer {
     clear: both;
     font-size: 1.5em;
     padding-top: 25px;
+}
+
+#foodbanner {
+    width: 100%;
 }
 
 #spaceapps {
@@ -548,13 +553,21 @@ input[type=submit] {
         margin-top: -75px;
     }
 
+    .food {
+        padding: 0;
+    }
+
+    .food h2 {
+        margin-top: 25px;
+    }
+
     #mainevents {
         padding: 0;
         margin-top: 25px;
     }
 
     #bday {
-        margin-top: 0px;
+        margin-top: 0;
     }
 
     #contactus {
@@ -569,5 +582,4 @@ input[type=submit] {
     #fb {
         margin-left: 200px;
     }
-
 }
