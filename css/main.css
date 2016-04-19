@@ -71,16 +71,7 @@ p {
     text-shadow: 1px 0 2px rgba(0, 0, 0, 0.75);
 }
 
-#banner ul {
-    list-style-type: none;
-    margin: auto;
-    margin-left: -40px;
-}
 
-#banner img {
-    width: 100%;
-
-}
 
 .menu img:hover,
 .arcade img:hover,

@@ -1,3 +1,7 @@
+$( '.picSlider' ).picSlider( {
+  animate: 'fade'
+} );
+
 $( document ).ready( function() {
 
 $( '#menu' ).slicknav( {
