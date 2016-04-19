@@ -184,16 +184,29 @@ footer {
 /* Begin Menu CSS */
 
 .food {
-    padding: 5%;
+    padding: 3%;
 }
 
-.food ul li {
-    list-style-type: none;
+.food h2 {
+    padding-top: 15px;
+}
+
+#summary {
+    margin-top: -10px;
 }
 
 .food h3 {
     clear: both;
     font-size: 1.5em;
+    padding-top: 25px;
+}
+
+#spaceapps {
+    margin-top: -50px;
+}
+
+.food ul li {
+    list-style-type: none;
 }
 
 #apps {
@@ -302,6 +315,10 @@ footer {
         width: 50%;
     }
 
+    .food h3 {
+        padding-top: 45px;
+    }
+
     .address {
         float: left;
         padding-right: 50px;
@@ -370,9 +387,18 @@ footer {
         width: 75%;
     }
 
-    .food h3 {
-        padding-top: -50px;
+    #spaceapps {
+        margin-top: -75px;
     }
+
+    #pizza {
+        margin-top: -500px;
+    }
+
+    .foodlist {
+        margin-top: -75px;
+    }
+
 
     #fb {
         margin-left: 200px;
