@@ -13,11 +13,6 @@ html {
     box-sizing: inherit;
 }
 
-@font-face {
-    font-family: euphemia;
-    src: url("../fonts/euphemia.ttf");
-}
-
 .visuallyhidden {
     border: 0;
     clip: rect(0 0 0 0);
@@ -36,6 +31,7 @@ html {
 
 body {
     background-color: #1d1e4e;
+    font-family: euphemia;
 }
 
 #header {
@@ -55,13 +51,15 @@ body {
     margin-right: auto;
 }
 
-#hours {
+#hours,
+.food h3 {
     color: #63d7e5;
 }
 
 #sun,
 #fri,
-footer p {
+footer p,
+.food h2 {
     color: #d4fc43;
 }
 
@@ -81,7 +79,8 @@ p {
 .menu img:hover,
 .arcade img:hover,
 .events img:hover,
-.contact img:hover {
+.contact img:hover,
+.menuitems img:hover {
     box-shadow: 0 0 2px 3px #d4fc43;
 }
 
@@ -174,7 +173,8 @@ footer li {
     .menu img,
     .arcade img,
     .events img,
-    .contact img {
+    .contact img,
+    .menuitems img {
         width: 50%;
         display: block;
         margin: auto;
@@ -279,7 +279,8 @@ footer li {
     .menu,
     .arcade,
     .events,
-    .contact {
+    .contact,
+    .menuitems {
         float: left;
         width: 25%;
         margin-top: 5%;
@@ -288,6 +289,11 @@ footer li {
 
     #linkcontent img {
         width: 75%;
+    }
+
+    .menuitems img {
+        width: 80%;
+        margin-left: 2%;
     }
 }
 
