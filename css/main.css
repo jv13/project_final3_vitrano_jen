@@ -122,7 +122,8 @@ footer p,
 #promotions img:hover,
 #events img:hover,
 #bday img:hover,
-#foodbanner {
+#foodbanner,
+#arcadegames img:hover {
     box-shadow: 0 0 2px 3px #d4fc43;
 }
 
@@ -205,7 +206,8 @@ footer {
 
 .food,
 #contactus,
-#mainevents {
+#mainevents,
+#arcadepage {
     padding: 3%;
 }
 
@@ -255,9 +257,18 @@ footer {
 
 /* End Menu CSS */
 
+/* Begin Arcade CSS */
+
+#arcadegames img {
+    margin-bottom: 25px;
+}
+
+/* End Arcade CSS */
+
 /* Begin Events CSS */
 
-#mainevents img {
+#mainevents img,
+#arcadegames img {
     width: 100%;
     border: 2px solid #63d7e5;
 }
