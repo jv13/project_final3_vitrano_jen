@@ -82,6 +82,20 @@ footer p,
 
 /* End CSS all page header */
 
+/* Helps to display child elements in main */
+
+.clearfix::before,
+.clearfix::after {
+    content: ".";
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
 
 /* Image content CSS for homepage */
 
