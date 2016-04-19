@@ -80,7 +80,9 @@ h2,
 h4,
 footer p,
 #hoursofop p,
-#events h3 {
+#promotions h3,
+#events h3,
+#party h3 {
     text-transform: uppercase;
 }
 
@@ -116,7 +118,10 @@ footer p,
 .events img:hover,
 .contact img:hover,
 .menuitems img:hover,
-.food img:hover {
+.food img:hover,
+#promotions img:hover,
+#events img:hover,
+#bday img:hover {
     box-shadow: 0 0 2px 3px #d4fc43;
 }
 
@@ -245,10 +250,16 @@ footer {
 
 /* End Menu CSS */
 
-/* Begin Evnets CSS */
+/* Begin Events CSS */
 
 #mainevents img {
     width: 100%;
+    border: 2px solid #63d7e5;
+}
+
+#promotions h2,
+#events h2 {
+    margin-bottom: 25px;
 }
 
 #tokens,
@@ -259,7 +270,18 @@ footer {
     margin-bottom: 20px;
 }
 
-#bday {
+#skeeball,
+#meetngreet {
+    border: 2px dotted #d4fc43;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#skeeball a {
+    color: #fb182c;
+}
+
+#party {
     border: 2px dotted #ff7000;
     padding: 10px;
 }
@@ -353,6 +375,11 @@ input[type=submit] {
         margin-top: 2%;
     }
 
+    #events h2,
+    #bday {
+        margin-top: 50px;
+    }
+
     .contact button {
         margin-bottom: 10%;
     }
@@ -406,6 +433,28 @@ input[type=submit] {
 
     .food h3 {
         padding-top: 45px;
+    }
+
+    #promotions,
+    #events,
+    #bday {
+        float: left;
+        width: calc(100% / 3);
+        padding: 10px;
+    }
+
+    #promotions h2,
+    #events h2,
+    #bday h2 {
+        text-align: center;
+    }
+
+    #events h2 {
+        margin-top: 17px;
+    }
+
+    #bday {
+        margin-top: -30px;
     }
 
     #contactus h2,
@@ -497,6 +546,15 @@ input[type=submit] {
 
     .foodlist {
         margin-top: -75px;
+    }
+
+    #mainevents {
+        padding: 0;
+        margin-top: 25px;
+    }
+
+    #bday {
+        margin-top: 0px;
     }
 
     #contactus {
