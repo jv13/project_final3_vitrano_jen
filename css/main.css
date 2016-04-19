@@ -62,7 +62,8 @@ p {
 
 #hours,
 .food h3,
-.title {
+.title,
+.menuitems h4 {
     color: #63d7e5;
 }
 
@@ -213,8 +214,18 @@ footer {
     padding-top: 50px;
 }
 
-.menuitems p {
+.menuitems p,
+.menuitems h4 {
     text-align: center;
+}
+
+.menuitems p {
+    margin-top: -10px;
+}
+
+.menuitems h4 {
+    color: #d4fc43;
+    text-transform: uppercase;
 }
 
 .menuitems {
@@ -389,10 +400,6 @@ footer {
 
     #spaceapps {
         margin-top: -75px;
-    }
-
-    #spacepizza {
-        padding-top: -500px;
     }
 
     .foodlist {
