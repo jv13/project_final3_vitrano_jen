@@ -3,14 +3,40 @@
     src: url("../fonts/euphemia.ttf");
 }
 
-html {
-    box-sizing: border-box;
-}
-
 *,
 *::before,
 *::after {
     box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1d1e4e;
+    font-family: euphemia;
+}
+
+.site-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+p {
+    color: #e6e6e6;
+    font-family: euphemia;
+    font-size: 1em;
+    text-shadow: 1px 0 2px rgba(0, 0, 0, 0.75);
+}
+
+/* Begin CSS all page header */
+
+#header {
+    margin: 0 auto;
+    background-image: url("../img/stars.png");
+    width: 100%;
+    height: auto;
 }
 
 .visuallyhidden {
@@ -22,23 +48,6 @@ html {
     padding: 0;
     position: absolute;
     width: 1px;
-}
-
-.site-container {
-    max-width: 1200px;
-    margin: auto;
-}
-
-body {
-    background-color: #1d1e4e;
-    font-family: euphemia;
-}
-
-#header {
-    margin: 0 auto;
-    background-image: url("../img/stars.png");
-    width: 100%;
-    height: auto;
 }
 
 #logo img {
@@ -67,12 +76,14 @@ footer p,
     margin-bottom: -10px;
 }
 
-p {
-    color: #e6e6e6;
-    font-family: euphemia;
-    font-size: 1em;
-    text-shadow: 1px 0 2px rgba(0, 0, 0, 0.75);
+.slicknav_menu {
+    display: none;
 }
+
+/* End CSS all page header */
+
+
+/* Image content CSS for homepage */
 
 .menu img:hover,
 .arcade img:hover,
@@ -117,6 +128,8 @@ p {
     top: 6px;
 }
 
+/* End button styling */
+
 #menu li,
 #linkcontent li,
 footer li
@@ -124,11 +137,8 @@ footer li
     display: inline;
 }
 
-/* End button styling */
 
-.slicknav_menu {
-    display: none;
-}
+/* Begin Footer Styling for all pages */
 
 #footer {
     background-image: url("../img/stars.png");
@@ -143,9 +153,46 @@ footer li
     margin-top: -10px;
 }
 
+/* End Footer styling */
+
+
+
+/* Begin Menu CSS */
+
+.food {
+    padding: 5%;
+}
+
+.food ul li {
+    list-style-type: none;
+}
+
+.food h3 {
+    clear: both;
+    font-size: 1.5em;
+}
+
+#apps {
+    padding-top: 50px;
+}
+
+.menuitems p {
+    text-align: center;
+}
+
+.menuitems {
+    margin-top: -1%;
+}
+
 /* Begin Mobile styling */
 
 @media all and (min-width: 300px) {
+
+    #header {
+        margin-top: 30px;
+        padding-bottom: 20px;
+        padding-left: 10px;
+    }
 
     #menu {
         display: none;
@@ -153,12 +200,6 @@ footer li
 
     .slicknav_menu {
         display: block;
-    }
-
-    #header {
-        margin-top: 30px;
-        padding-bottom: 20px;
-        padding-left: 10px;
     }
 
     #sun,
@@ -297,31 +338,4 @@ footer li
         padding-top: -50px;
     }
 
-}
-
-/* Begin Menu CSS */
-
-.food {
-    padding: 5%;
-}
-
-.food ul li {
-    list-style-type: none;
-}
-
-.food h3 {
-    clear: both;
-    font-size: 1.5em;
-}
-
-#apps {
-    padding-top: 50px;
-}
-
-.menuitems p {
-    text-align: center;
-}
-
-.menuitems {
-    margin-top: -1%;
 }
