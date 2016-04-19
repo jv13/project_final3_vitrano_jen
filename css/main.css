@@ -79,7 +79,8 @@ label {
 h2,
 h4,
 footer p,
-#hoursofop p {
+#hoursofop p,
+#events h3 {
     text-transform: uppercase;
 }
 
@@ -197,7 +198,8 @@ footer {
 /* Begin Menu CSS */
 
 .food,
-#contactus {
+#contactus,
+#mainevents {
     padding: 3%;
 }
 
@@ -243,6 +245,30 @@ footer {
 
 /* End Menu CSS */
 
+/* Begin Evnets CSS */
+
+#mainevents img {
+    width: 100%;
+}
+
+#tokens,
+#disco,
+#parent {
+    border: 2px dotted #63d7e5;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#bday {
+    border: 2px dotted #ff7000;
+    padding: 10px;
+}
+
+#bday button {
+    margin-bottom: 10px;
+}
+
+/* End Events CSS */
 
 /* Begin Contact CSS */
 
