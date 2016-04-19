@@ -3,8 +3,9 @@
  * (c) 2016 Josh Cope
  * licensed under MIT
  */
-;(function ($, document, window) {
+;( function( $, document, window ) {
     var
+
     // default settings object.
         defaults = {
             label: 'MENU',
@@ -25,26 +26,26 @@
             removeClasses: false,
             removeStyles: false,
 			brand: '',
-            init: function () {},
-            beforeOpen: function () {},
-            beforeClose: function () {},
-            afterOpen: function () {},
-            afterClose: function () {}
+            init: function() {},
+            beforeOpen: function() {},
+            beforeClose: function() {},
+            afterOpen: function() {},
+            afterClose: function() {}
         },
         mobileMenu = 'slicknav',
         prefix = 'slicknav';
 
-    function Plugin(element, options) {
+    function Plugin( element, options ) {
         this.element = element;
 
         // jQuery has an extend method which merges the contents of two or
         // more objects, storing the result in the first object. The first object
         // is generally empty as we don't want to alter the default options for
         // future instances of the plugin
-        this.settings = $.extend({}, defaults, options);
+        this.settings = $.extend( {}, defaults, options );
 
         // Don't remove IDs by default if duplicate is false
-        if (!this.settings.duplicate && !options.hasOwnProperty("removeIds")) {
+        if ( !this.settings.duplicate && !options.hasOwnProperty( 'removeIds' ) ) {
           this.settings.removeIds = false;
         }
 
@@ -54,64 +55,64 @@
         this.init();
     }
 
-    Plugin.prototype.init = function () {
+    Plugin.prototype.init = function() {
         var $this = this,
-            menu = $(this.element),
+            menu = $( this.element ),
             settings = this.settings,
             iconClass,
             menuBar;
 
         // clone menu if needed
-        if (settings.duplicate) {
+        if ( settings.duplicate ) {
             $this.mobileNav = menu.clone();
         } else {
             $this.mobileNav = menu;
         }
 
         // remove IDs if set
-        if (settings.removeIds) {
-          $this.mobileNav.removeAttr('id');
-          $this.mobileNav.find('*').each(function (i, e) {
-              $(e).removeAttr('id');
-          });
+        if ( settings.removeIds ) {
+          $this.mobileNav.removeAttr( 'id' );
+          $this.mobileNav.find( '*' ).each( function( i, e ) {
+              $( e ).removeAttr( 'id' );
+          } );
         }
 
         // remove classes if set
-        if (settings.removeClasses) {
-            $this.mobileNav.removeAttr('class');
-            $this.mobileNav.find('*').each(function (i, e) {
-                $(e).removeAttr('class');
-            });
+        if ( settings.removeClasses ) {
+            $this.mobileNav.removeAttr( 'class' );
+            $this.mobileNav.find( '*' ).each( function( i, e ) {
+                $( e ).removeAttr( 'class' );
+            } );
         }
 
         // remove styles if set
-        if (settings.removeStyles) {
-            $this.mobileNav.removeAttr('style');
-            $this.mobileNav.find('*').each(function (i, e) {
-                $(e).removeAttr('style');
-            });
+        if ( settings.removeStyles ) {
+            $this.mobileNav.removeAttr( 'style' );
+            $this.mobileNav.find( '*' ).each( function( i, e ) {
+                $( e ).removeAttr( 'style' );
+            } );
         }
 
         // styling class for the button
         iconClass = prefix + '_icon';
 
-        if (settings.label === '') {
+        if ( settings.label === '' ) {
             iconClass += ' ' + prefix + '_no-text';
         }
 
-        if (settings.parentTag == 'a') {
+        if ( settings.parentTag == 'a' ) {
             settings.parentTag = 'a href="#"';
         }
 
         // create menu bar
-        $this.mobileNav.attr('class', prefix + '_nav');
-        menuBar = $('<div class="' + prefix + '_menu"></div>');
-		if (settings.brand !== '') {
-			var brand = $('<div class="' + prefix + '_brand">'+settings.brand+'</div>');
-			$(menuBar).append(brand);
+        $this.mobileNav.attr( 'class', prefix + '_nav' );
+        menuBar = $( '<div class="' + prefix + '_menu"></div>' );
+		if ( settings.brand !== '' ) {
+			var brand = $( '<div class="' + prefix + '_brand">' + settings.brand + '</div>' );
+			$( menuBar ).append( brand );
 		}
         $this.btn = $(
-            ['<' + settings.parentTag + ' aria-haspopup="true" tabindex="0" class="' + prefix + '_btn ' + prefix + '_collapsed">',
+            [ '<' + settings.parentTag + ' aria-haspopup="true" tabindex="0" class="' + prefix + '_btn ' + prefix + '_collapsed">',
                 '<span class="' + prefix + '_menutxt">' + settings.label + '</span>',
                 '<span class="' + iconClass + '">',
                     '<span class="' + prefix + '_icon-bar"></span>',
@@ -119,26 +120,26 @@
                     '<span class="' + prefix + '_icon-bar"></span>',
                 '</span>',
             '</' + settings.parentTag + '>'
-            ].join('')
+            ].join( '' )
         );
-        $(menuBar).append($this.btn);
-        if(settings.appendTo !== '') {
-            $(settings.appendTo).append(menuBar);
+        $( menuBar ).append( $this.btn );
+        if ( settings.appendTo !== '' ) {
+            $( settings.appendTo ).append( menuBar );
         } else {
-            $(settings.prependTo).prepend(menuBar);
+            $( settings.prependTo ).prepend( menuBar );
         }
-        menuBar.append($this.mobileNav);
+        menuBar.append( $this.mobileNav );
 
         // iterate over structure adding additional structure
-        var items = $this.mobileNav.find('li');
-        $(items).each(function () {
-            var item = $(this),
+        var items = $this.mobileNav.find( 'li' );
+        $( items ).each( function() {
+            var item = $( this ),
                 data = {};
-            data.children = item.children('ul').attr('role', 'menu');
-            item.data('menu', data);
+            data.children = item.children( 'ul' ).attr( 'role', 'menu' );
+            item.data( 'menu', data );
 
             // if a list item has a nested menu
-            if (data.children.length > 0) {
+            if ( data.children.length > 0 ) {
 
                 // select all text before the child menu
                 // check for anchors
@@ -147,53 +148,52 @@
                     containsAnchor = false,
                     nodes = [];
 
-                $(a).each(function () {
-                    if (!$(this).is('ul')) {
-                        nodes.push(this);
+                $( a ).each( function() {
+                    if ( !$( this ).is( 'ul' ) ) {
+                        nodes.push( this );
                     } else {
                         return false;
                     }
 
-                    if($(this).is("a")) {
+                    if ( $( this ).is( 'a' ) ) {
                         containsAnchor = true;
                     }
-                });
+                } );
 
                 var wrapElement = $(
                     '<' + settings.parentTag + ' role="menuitem" aria-haspopup="true" tabindex="-1" class="' + prefix + '_item"/>'
                 );
 
                 // wrap item text with tag and add classes unless we are separating parent links
-                if ((!settings.allowParentLinks || settings.nestedParentLinks) || !containsAnchor) {
-                    var $wrap = $(nodes).wrapAll(wrapElement).parent();
-                    $wrap.addClass(prefix+'_row');
+                if ( ( !settings.allowParentLinks || settings.nestedParentLinks ) || !containsAnchor ) {
+                    var $wrap = $( nodes ).wrapAll( wrapElement ).parent();
+                    $wrap.addClass( prefix + '_row' );
                 } else
-                    $(nodes).wrapAll('<span class="'+prefix+'_parent-link '+prefix+'_row"/>').parent();
+                    $( nodes ).wrapAll( '<span class="' + prefix + '_parent-link ' + prefix + '_row"/>' ).parent();
 
-                if (!settings.showChildren) {
-                    item.addClass(prefix+'_collapsed');
+                if ( !settings.showChildren ) {
+                    item.addClass( prefix + '_collapsed' );
                 } else {
-                    item.addClass(prefix+'_open');
+                    item.addClass( prefix + '_open' );
                 }
 
-                item.addClass(prefix+'_parent');
+                item.addClass( prefix + '_parent' );
 
                 // create parent arrow. wrap with link if parent links and separating
-                var arrowElement = $('<span class="'+prefix+'_arrow">'+(settings.showChildren?settings.openedSymbol:settings.closedSymbol)+'</span>');
+                var arrowElement = $( '<span class="' + prefix + '_arrow">' + ( settings.showChildren?settings.openedSymbol:settings.closedSymbol )  + '</span>' );
 
-                if (settings.allowParentLinks && !settings.nestedParentLinks && containsAnchor)
-                    arrowElement = arrowElement.wrap(wrapElement).parent();
+                if ( settings.allowParentLinks && !settings.nestedParentLinks && containsAnchor )
+                    arrowElement = arrowElement.wrap( wrapElement ).parent();
 
                 //append arrow
-                $(nodes).last().after(arrowElement);
+                $( nodes ).last().after( arrowElement );
 
-
-            } else if ( item.children().length === 0) {
-                 item.addClass(prefix+'_txtnode');
+            } else if ( item.children().length === 0 ) {
+                 item.addClass( prefix + '_txtnode' );
             }
 
             // accessibility for links
-            item.children('a').attr('role', 'menuitem').click(function(event){
+            item.children( 'a' ).attr( 'role', 'menuitem' ).click( function( event ){
                 //Ensure that it's not a parent
                 if (settings.closeOnClick && !$(event.target).parent().closest('li').hasClass(prefix+'_parent')) {
                         //Emulate menu close if set
@@ -202,23 +202,23 @@
             });
 
             //also close on click if parent links are set
-            if (settings.closeOnClick && settings.allowParentLinks) {
-                item.children('a').children('a').click(function (event) {
+            if ( settings.closeOnClick && settings.allowParentLinks ) {
+                item.children( 'a' ).children( 'a' ).click( function ( event ) {
                     //Emulate menu close
                     $($this.btn).click();
-                });
+                } );
 
-                item.find('.'+prefix+'_parent-link a:not(.'+prefix+'_item)').click(function(event){
+                item.find( '.' + prefix + '_parent-link a:not(.' + prefix + '_item ) ' ).click( function( event ) {
                     //Emulate menu close
-                        $($this.btn).click();
-                });
+                        $( $this.btn ).click();
+                } );
             }
-        });
+        } );
 
         // structure is in place, now hide appropriate items
-        $(items).each(function () {
-            var data = $(this).data('menu');
-            if (!settings.showChildren){
+        $( items ).each( function () {
+            var data = $( this ).data( 'menu' );
+            if ( !settings.showChildren ){
                 $this._visibilityToggle(data.children, null, false, null, true);
             }
         });
