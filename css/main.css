@@ -246,6 +246,10 @@ footer {
 
 /* Begin Contact CSS */
 
+#socialmediacontact {
+    margin-right: 10px;
+}
+
 form {
     border: 2px dotted #ff7000;
     padding: 10px;
