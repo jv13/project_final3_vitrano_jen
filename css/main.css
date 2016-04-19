@@ -70,11 +70,9 @@ footer p,
 p {
     color: #e6e6e6;
     font-family: euphemia;
-    font-size: 0.8em;
+    font-size: 1em;
     text-shadow: 1px 0 2px rgba(0, 0, 0, 0.75);
 }
-
-
 
 .menu img:hover,
 .arcade img:hover,
@@ -197,6 +195,11 @@ footer li
         padding-left: 10px;
         font-size: 1em;
     }
+
+    .food h2 {
+        font-size: 2em;
+        margin-top: -10px;
+    }
 }
 
 @media all and (min-width: 716px) {
@@ -239,7 +242,6 @@ footer li
         float: left;
         width: 25%;
     }
-
 
 }
 
@@ -291,27 +293,35 @@ footer li
         width: 75%;
     }
 
+    .food h3 {
+        padding-top: -50px;
+    }
+
 }
 
 /* Begin Menu CSS */
+
 .food {
     padding: 5%;
 }
+
 .food ul li {
     list-style-type: none;
 }
 
 .food h3 {
     clear: both;
-    padding-top: -5%;
     font-size: 1.5em;
+}
+
+#apps {
+    padding-top: 50px;
 }
 
 .menuitems p {
     text-align: center;
-    font-size: 1.3em;
 }
 
 .menuitems {
-  margin-top: -1%;
+    margin-top: -1%;
 }
