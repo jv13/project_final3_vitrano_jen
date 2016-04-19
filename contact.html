@@ -28,22 +28,66 @@
           </ul>
         </nav>
 
-				<div id="hoursofop">
-	        <p id="hours">HOURS OF OPERATION:</p> <p id="sun">SUN - THURS | 11AM - 9PM</p> <p id="fri">FRI - SAT | 11AM - 11PM</p>
-				</div>
+        <div id="hoursofop">
+          <p id="hours">hours of operation:</p> <p id="sun">sun - thurs | 11am - 9pm</p> <p id="fri">fri - sat | 11am - 11pm</p>
+        </div>
     </header>
+
+    <main class="clearfix" id="contactus">
+      <section id="contactinfo">
+        <h2>contact us for your next event!</h2>
+        <p>To schedule your next birthday party, event, or to just say hi you can visit, call, email, or fill out the form below! You can also follow up on social media to say up to date on what's new in our galaxy!</p>
+
+        <article>
+          <p><span class="contacttitle">Address:</span> 2319 Space Drive Emryville, CA 94608</p>
+          <p><span class="contacttitle">Phone Number:</span> 510-236-2300</p>
+          <p><span class="contacttitle">E-Mail:</span> info@pizzaplanet.com</p>
+        </article>
+
+        <article id="socialmediacontact">
+          <ul class="contactsm">
+            <li><a href="#"><img src="img/facebook.png" alt="Pizza Planet Outside" title="Pizza Planet Building"></a></li>
+            <li><a href="#"><img src="img/twitter.png" alt="Pizza Planet Outside" title="Pizza Planet Building"></a></li>
+            <li><a href="#"><img src="img/instagram.png" alt="Pizza Planet Outside" title="Pizza Planet Building"></a></li>
+            <li><a href="#"><img src="img/youtub.png" alt="Pizza Planet Outside" title="Pizza Planet Building"></a></li>
+          </ul>
+        </article>
+      </section>
+
+    <form id="contactform">
+      <h2>contact form</h2>
+      <label for="firstname" class="contacttitle">First Name:</label>
+      <input type="text" name="firstname" id="firstName">
+
+      <label for="lastname" class="contacttitle">Last Name:</label>
+      <input type="text" name="lastname" id="lastName">
+
+      <label for="email" class="contacttitle">Email:</label>
+      <input type="text" name="email" id="emailBox" >
+
+      <label for="date" class="contacttitle">Date of Event:</label>
+      <input type="date" name="date" id="dateofevent">
+
+      <label for="message" class="contacttitle">Comments:</label>
+      <textarea name="message" rows="5" cols="20" id="messageBox"></textarea>
+
+      <input type="submit" value="Submit" id="submitButton">
+    </form>
+
+    </main>
+
 
     <footer>
       <article class="address">
-        <p class="title" id="comevisit">COME VISIT US:</p>
-        <p class="footertext">2319 SPACE DRIVE</p>
-        <p class="footertext">EMRYVILLE, CA 94608</p>
+        <p class="title" id="comevisit">come visit us:</p>
+        <p class="footertext">2319 space drive</p>
+        <p class="footertext">emmryville, ca 94608</p>
       </article>
 
       <article class="phone">
-        <p class="title">SAY HELLO:</p>
+        <p class="title">say hello:</p>
         <p class="footertext">510-236-2300</p>
-        <p class="footertext">INFO@PIZZAPLANET.COM</p>
+        <p class="footertext">info@pizzaplanet.com</p>
       </article>
 
       <aside class="socialmedia">
@@ -57,8 +101,8 @@
     </footer>
   </div>
 
-		<script src="js/jquery-2.2.2.min.js"></script>
-		<script src="js/jquery.slicknav.js"></script>
-		<script src="js/main.js"></script>
+    <script src="js/jquery-2.2.2.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/main.js"></script>
 	</body>
 	</html>

@@ -61,17 +61,26 @@ p {
 }
 
 #hours,
-.food h3,
+h3,
 .title,
-.menuitems h4 {
+.contacttitle {
     color: #63d7e5;
 }
 
 #sun,
 #fri,
 footer p,
-.food h2 {
+h2,
+h4,
+label {
     color: #d4fc43;
+}
+
+h2,
+h4,
+footer p,
+#hoursofop p {
+    text-transform: uppercase;
 }
 
 #fri {
@@ -116,7 +125,8 @@ footer p,
     margin-top: 20px;
 }
 
-.btn {
+.btn,
+input[type=submit] {
     border: none;
     color: #e6e6e6;
     background-color: #ff7000;
@@ -134,12 +144,14 @@ footer p,
 }
 
 
-.btn-hover:hover {
+.btn-hover:hover,
+input[type=submit]:hover {
     box-shadow: 0 4px #ab3c3c;
     top: 2px;
 }
 
-.btn-hover:active {
+.btn-hover:active,
+input[type=submit]:active {
     box-shadow: 0 0 #ab3c3c;
     top: 6px;
 }
@@ -150,7 +162,7 @@ footer p,
 #linkcontent li,
 footer li,
 .menuitems li,
-.fa-ul i {
+#socialmediacontact li {
     display: inline;
 }
 
@@ -184,7 +196,8 @@ footer {
 
 /* Begin Menu CSS */
 
-.food {
+.food,
+#contactus {
     padding: 3%;
 }
 
@@ -224,14 +237,48 @@ footer {
     padding: 5px;
 }
 
-.menuitems h4 {
-    color: #d4fc43;
-    text-transform: uppercase;
-}
-
 .menuitems {
     margin-top: -1%;
 }
+
+/* End Menu CSS */
+
+
+/* Begin Contact CSS */
+
+form {
+    border: 2px dotted #ff7000;
+    padding: 10px;
+}
+
+#dateofevent {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    margin-right: 100px;
+}
+
+input[type=text],
+textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 20px 0;
+    display: inline-block;
+    border: 1px solid #339999;
+    box-sizing: border-box;
+    border-radius: 10px;
+
+}
+
+input[type=submit] {
+    background-color: #ff7000;
+    color: white;
+    padding: -20px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+
+/* End Contact CSS */
 
 /* Begin Mobile styling */
 
@@ -331,6 +378,21 @@ footer {
         padding-top: 45px;
     }
 
+    #contactus h2,
+    #contactus p {
+        padding-right: 20px;
+    }
+
+    #contactinfo {
+        width: 50%;
+        float: left;
+    }
+
+    #contactform {
+        float: right;
+        width: 50%;
+    }
+
     .address {
         float: left;
         padding-right: 50px;
@@ -407,6 +469,14 @@ footer {
         margin-top: -75px;
     }
 
+    #contactus {
+        margin: 0;
+        padding: 20px 5px;
+    }
+
+    #dateofevent {
+        margin-right: 200px;
+    }
 
     #fb {
         margin-left: 200px;
