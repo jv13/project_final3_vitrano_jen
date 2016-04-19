@@ -82,7 +82,8 @@ footer p,
 #hoursofop p,
 #promotions h3,
 #events h3,
-#party h3 {
+#party h3,
+#tokens h3 {
     text-transform: uppercase;
 }
 
@@ -225,7 +226,9 @@ footer {
     padding-top: 25px;
 }
 
-#foodbanner {
+#foodbanner,
+#skeeball img,
+.arcadegames img {
     width: 100%;
 }
 
@@ -257,13 +260,6 @@ footer {
 
 /* End Menu CSS */
 
-/* Begin Arcade CSS */
-
-#arcadegames img {
-    margin-bottom: 25px;
-}
-
-/* End Arcade CSS */
 
 /* Begin Events CSS */
 
@@ -293,7 +289,8 @@ footer {
     margin-bottom: 20px;
 }
 
-#skeeball a {
+#skeeball a,
+#tokens a {
     color: #fb182c;
 }
 
@@ -451,6 +448,19 @@ input[type=submit] {
         padding-top: 45px;
     }
 
+    #arcadecontent {
+        float: left;
+        width: 50%;
+        padding-right: 25px;
+
+    }
+
+    #arcadegames {
+        float: right;
+        width: calc(100% / 2);
+        padding-right: -30px;
+    }
+
     #promotions,
     #events,
     #bday {
@@ -556,10 +566,7 @@ input[type=submit] {
         width: 75%;
     }
 
-    #spaceapps {
-        margin-top: -75px;
-    }
-
+    #spaceapps,
     .foodlist {
         margin-top: -75px;
     }
@@ -575,6 +582,15 @@ input[type=submit] {
     #mainevents {
         padding: 0;
         margin-top: 25px;
+    }
+
+    #arcadecontent {
+        margin-left: -3%;
+        margin-top: -25px;
+    }
+
+    #arcadegames {
+        margin-right: -30px;
     }
 
     #bday {
