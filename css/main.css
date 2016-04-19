@@ -290,3 +290,9 @@ footer li {
         width: 75%;
     }
 }
+
+/* Begin Menu CSS */
+
+.food ul li {
+    list-style-type: none;
+}
