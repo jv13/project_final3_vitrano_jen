@@ -72,7 +72,8 @@ h3,
 footer p,
 h2,
 h4,
-label {
+label,
+#award {
     color: #d4fc43;
 }
 
@@ -83,7 +84,8 @@ footer p,
 #promotions h3,
 #events h3,
 #party h3,
-#tokens h3 {
+#tokens h3,
+#award {
     text-transform: uppercase;
 }
 
@@ -111,8 +113,13 @@ footer p,
     clear: both;
 }
 
-
 /* Image content CSS for homepage */
+
+#tripadvisor img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .menu img:hover,
 .arcade img:hover,
@@ -127,8 +134,6 @@ footer p,
 #arcadegames img:hover {
     box-shadow: 0 0 2px 3px #d4fc43;
 }
-
-
 
 /* Begin Button Styling */
 
@@ -436,6 +441,16 @@ input[type=submit] {
     #fri {
         display: inline;
         font-size: 1em;
+    }
+
+    #lefty {
+        width: 50%;
+    }
+
+    #tripadvisor {
+        float: right;
+        margin-top: -225px;
+        margin-right: 200px;
     }
 
     #linkcontent img {
