@@ -20,6 +20,15 @@ jQuery( document ).ready( function() {
   jQuery( '.carousel' ).slippry();
 } );
 
+// Listen for click event on id="dishoftheday" or h2 "Pizza planet menu",
+//when clicked create article that adds menu special dish of the day.
+var dish = document.getElementById( 'dishoftheday' );
+dish.addEventListener( 'click', function() {
+    var myDish = document.createElement( 'article' );
+		myDish.innerHTML = '<h4>Dish of the day: Bacon Mac and Cheese Pizza!</h4>';
+		document.getElementsByClassName( 'menutitle' )[ 0 ].appendChild( myDish );
+} );
+
 // Listen for click event on id="chbrd",
 //when clicked create article that adds item name, description, and price.
 var appOne = document.getElementById( 'chbrd' );

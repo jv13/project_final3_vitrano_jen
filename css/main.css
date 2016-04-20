@@ -24,6 +24,7 @@ body {
 }
 
 .site-container {
+    background-color: #1d1e4e;
     max-width: 1200px;
     margin: auto;
 }
