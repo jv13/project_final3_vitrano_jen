@@ -34,7 +34,7 @@ p {
 
 #header {
     margin: 0 auto;
-    background-image: url("../img/stars.png");
+    background-image: url("../img/darksky.jpg");
     width: 100%;
     height: auto;
 }
@@ -167,6 +167,11 @@ input[type=submit]:active {
     top: 6px;
 }
 
+#gift img {
+    width: 35%;
+    border-radius: 75%;
+}
+
 /* End button styling */
 
 #menu li,
@@ -181,7 +186,7 @@ footer li,
 /* Begin Footer Styling for all pages */
 
 footer {
-    background-image: url("../img/stars.png");
+    background-image: url("../img/darksky.jpg");
 }
 
 #comevisit {

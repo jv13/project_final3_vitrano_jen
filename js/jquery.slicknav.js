@@ -193,22 +193,25 @@
             }
 
             // accessibility for links
-            item.children( 'a' ).attr( 'role', 'menuitem' ).click( function( event ){
+            item.children( 'a' ).attr( 'role', 'menuitem' ).click( function( event ) {
+
                 //Ensure that it's not a parent
-                if (settings.closeOnClick && !$(event.target).parent().closest('li').hasClass(prefix+'_parent')) {
+                if ( settings.closeOnClick && !$( event.target ).parent().closest( 'li' ).hasClass( prefix + '_parent' ) ) {
                         //Emulate menu close if set
-                        $($this.btn).click();
+                        $( $this.btn ).click();
                     }
-            });
+            } );
 
             //also close on click if parent links are set
             if ( settings.closeOnClick && settings.allowParentLinks ) {
-                item.children( 'a' ).children( 'a' ).click( function ( event ) {
+                item.children( 'a' ).children( 'a' ).click( function( event ) {
+
                     //Emulate menu close
-                    $($this.btn).click();
+                    $( $this.btn ).click();
                 } );
 
                 item.find( '.' + prefix + '_parent-link a:not(.' + prefix + '_item ) ' ).click( function( event ) {
+
                     //Emulate menu close
                         $( $this.btn ).click();
                 } );
@@ -216,56 +219,56 @@
         } );
 
         // structure is in place, now hide appropriate items
-        $( items ).each( function () {
+        $( items ).each( function() {
             var data = $( this ).data( 'menu' );
-            if ( !settings.showChildren ){
-                $this._visibilityToggle(data.children, null, false, null, true);
+            if ( !settings.showChildren ) {
+                $this._visibilityToggle( data.children, null, false, null, true );
             }
-        });
+        } );
 
         // finally toggle entire menu
-        $this._visibilityToggle($this.mobileNav, null, false, 'init', true);
+        $this._visibilityToggle( $this.mobileNav, null, false, 'init', true );
 
         // accessibility for menu button
-        $this.mobileNav.attr('role','menu');
+        $this.mobileNav.attr( 'role', 'menu' );
 
         // outline prevention when using mouse
-        $(document).mousedown(function(){
-            $this._outlines(false);
-        });
+        $( document ).mousedown( function() {
+            $this._outlines( false );
+        } );
 
-        $(document).keyup(function(){
-            $this._outlines(true);
-        });
+        $( document ).keyup( function() {
+            $this._outlines( true );
+        } );
 
         // menu button click
-        $($this.btn).click(function (e) {
+        $( $this.btn ).click( function( e ) {
             e.preventDefault();
             $this._menuToggle();
-        });
+        } );
 
         // click on menu parent
-        $this.mobileNav.on('click', '.' + prefix + '_item', function (e) {
+        $this.mobileNav.on( 'click', '.' + prefix + '_item', function( e ) {
             e.preventDefault();
-            $this._itemClick($(this));
-        });
+            $this._itemClick( $( this ) );
+        } );
 
         // check for enter key on menu button and menu parents
-        $($this.btn).keydown(function (e) {
+        $( $this.btn ).keydown( function( e ) {
             var ev = e || event;
-            if(ev.keyCode == 13) {
+            if ( ev.keyCode == 13 ) {
                 e.preventDefault();
                 $this._menuToggle();
             }
-        });
+        } );
 
-        $this.mobileNav.on('keydown', '.'+prefix+'_item', function(e) {
+        $this.mobileNav.on( 'keydown', '.' + prefix + '_item', function( e ) {
             var ev = e || event;
-            if(ev.keyCode == 13) {
+            if ( ev.keyCode == 13 ) {
                 e.preventDefault();
-                $this._itemClick($(e.target));
+                $this._itemClick( $( e.target ) );
             }
-        });
+        } );
 
         // allow links clickable within parent tags if set
         if (settings.allowParentLinks && settings.nestedParentLinks) {
@@ -281,37 +284,38 @@
         var btn = $this.btn;
         var mobileNav = $this.mobileNav;
 
-        if (btn.hasClass(prefix+'_collapsed')) {
-            btn.removeClass(prefix+'_collapsed');
-            btn.addClass(prefix+'_open');
+        if ( btn.hasClass( prefix + '_collapsed' ) ) {
+            btn.removeClass( prefix + '_collapsed' );
+            btn.addClass( prefix + '_open' );
         } else {
-            btn.removeClass(prefix+'_open');
-            btn.addClass(prefix+'_collapsed');
+            btn.removeClass( prefix + '_open' );
+            btn.addClass( prefix + '_collapsed' );
         }
-        btn.addClass(prefix+'_animating');
-        $this._visibilityToggle(mobileNav, btn.parent(), true, btn);
+        btn.addClass( prefix + '_animating' );
+        $this._visibilityToggle( mobileNav, btn.parent(), true, btn );
     };
 
     // toggle clicked items
-    Plugin.prototype._itemClick = function (el) {
+    Plugin.prototype._itemClick = function( el ) {
         var $this = this;
         var settings = $this.settings;
-        var data = el.data('menu');
-        if (!data) {
+        var data = el.data( 'menu' );
+        if ( !data ) {
             data = {};
-            data.arrow = el.children('.'+prefix+'_arrow');
-            data.ul = el.next('ul');
+            data.arrow = el.children( '.' + prefix + '_arrow' );
+            data.ul = el.next( 'ul' );
             data.parent = el.parent();
+
             //Separated parent link structure
-            if (data.parent.hasClass(prefix+'_parent-link')) {
+            if ( data.parent.hasClass( prefix + '_parent-link' ) ) {
                 data.parent = el.parent().parent();
-                data.ul = el.parent().next('ul');
+                data.ul = el.parent().next( 'ul' );
             }
-            el.data('menu', data);
+            el.data( 'menu', data );
         }
-        if (data.parent.hasClass(prefix+'_collapsed')) {
-            data.arrow.html(settings.openedSymbol);
-            data.parent.removeClass(prefix+'_collapsed');
+        if ( data.parent.hasClass( prefix + '_collapsed' ) ) {
+            data.arrow.html( settings.openedSymbol );
+            data.parent.removeClass( prefix + '_collapsed' );
             data.parent.addClass(prefix+'_open');
             data.parent.addClass(prefix+'_animating');
             $this._visibilityToggle(data.ul, data.parent, true, el);
