@@ -276,6 +276,11 @@ footer {
 
 /* Begin Events CSS */
 
+#party a,
+#linkcontent a {
+    text-decoration: none;
+}
+
 #mainevents img,
 #arcadegames img {
     width: 100%;
