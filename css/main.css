@@ -13,6 +13,11 @@ html {
     box-sizing: border-box;
 }
 
+.surprise {
+    color: #63d7e5;
+    text-transform: uppercase;
+}
+
 body {
     background-color: #1d1e4e;
     font-family: euphemia;

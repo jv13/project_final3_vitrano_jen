@@ -1,3 +1,15 @@
+//jQuery creates a hover effect on the id easteregg,
+//onhover, its adds a class of surprise which changes the color
+//to blue and replaces the text "its out of this world fun!".
+//one the hover is removed it is replaced with origional text and color
+$( document ).ready( function() {
+    $( '#easteregg' ).hover( function() {
+			$( '#easteregg' ).addClass( 'surprise' ).text( 'Its out of this world fun!' );
+		}, function() {
+			$( '#easteregg' ).removeClass( 'surprise' ).text( 'welcome to pizza planet' );
+		} );
+} );
+
 // jQuery for header hamburger nav
 $( function() {
 		$( '#menu' ).slicknav();
