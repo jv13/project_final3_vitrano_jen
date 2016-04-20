@@ -128,6 +128,8 @@ footer p,
     box-shadow: 0 0 2px 3px #d4fc43;
 }
 
+
+
 /* Begin Button Styling */
 
 #linkcontent button {
@@ -208,7 +210,8 @@ footer {
 .food,
 #contactus,
 #mainevents,
-#arcadepage {
+#arcadepage,
+#indexcontent {
     padding: 3%;
 }
 
